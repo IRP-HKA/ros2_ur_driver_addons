@@ -1,0 +1,31 @@
+joint_target_broadcaster:
+
+  joints: {
+    type: string_array,
+    default_value: [],
+    description: "Joint names to claim and listen to",
+    read_only: true,
+    validation: {
+      unique<>: null,
+  } }
+
+  target_joint_position_interface_name: {
+    type: string,
+    default_value: "joint_target_position",
+    description: "Name of the state interface to listen to for target joint positions",
+    read_only: true,
+  }
+
+  target_joint_velocity_interface_name: {
+    type: string,
+    default_value: "joint_target_velocity",
+    description: "Name of the state interface to listen to for target joint velocities",
+    read_only: true,
+  }
+
+  target_joint_acceleration_interface_name: {
+    type: string,
+    default_value: "joint_target_acceleration",
+    description: "Name of the state interface to listen to for target joint accelerations",
+    read_only: true,
+  }

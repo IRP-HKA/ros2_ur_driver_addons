@@ -1,0 +1,43 @@
+tcp_dyn_state_broadcaster:
+
+  tcp_twist_interface_name: {
+    type: string,
+    default_value: "tcp_twist",
+    description: "Name of the hardware state interface prefix for TCP velocity (e.g. '<tf_prefix>tcp_twist').",
+    read_only: true,
+  }
+
+  tcp_accel_interface_name: {
+    type: string,
+    default_value: "tcp_acceleration",
+    description: "Name of the hardware state interface prefix for TCP acceleration (e.g. '<tf_prefix>tcp_acceleration').",
+    read_only: true,
+  }
+
+  linear_twist_decimal_places: {
+    type: int,
+    default_value: 3,
+    description: "Number of decimal places to round the linear twist values to before publishing.",
+    read_only: true,
+  }
+
+  angular_twist_decimal_places: {
+    type: int,
+    default_value: 2,
+    description: "Number of decimal places to round the angular twist values to before publishing.",
+    read_only: true,
+  }
+
+  linear_accel_decimal_places: {
+    type: int,
+    default_value: 3,
+    description: "Number of decimal places to round the linear acceleration values to before publishing.",
+    read_only: true,
+  }
+
+  angular_accel_decimal_places: {
+    type: int,
+    default_value: 2,
+    description: "Number of decimal places to round the angular acceleration values to before publishing.",
+    read_only: true,
+  }

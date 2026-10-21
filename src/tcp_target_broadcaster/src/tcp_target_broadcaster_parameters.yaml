@@ -1,0 +1,50 @@
+tcp_target_broadcaster:
+
+  tcp_target_pose_interface_name: {
+    type: string,
+    default_value: "target_tcp_pose",
+    description: "Name of the state interface to listen to for target TCP position (e.g. 'ur/target_tcp_pose').",
+    read_only: true,
+  }
+
+  tcp_target_twist_interface_name: {
+    type: string,
+    default_value: "target_tcp_twist",
+    description: "Name of the state interface to listen to for target TCP twist (e.g. 'ur/target_tcp_twist').",
+    read_only: true,
+  }
+
+  tcp_target_acceleration_interface_name: {
+    type: string,
+    default_value: "target_tcp_acceleration",
+    description: "Name of the state interface to listen to for target TCP acceleration (e.g. 'ur/target_tcp_acceleration').",
+    read_only: true,
+  }
+
+  tcp_target_twist_linear_decimal_places: {
+    type: int,
+    default_value: 3,
+    description: "Number of decimal places to round the linear target TCP velocity values to before publishing.",
+    read_only: true,
+  }
+
+  tcp_target_twist_angular_decimal_places: {
+    type: int,
+    default_value: 2,
+    description: "Number of decimal places to round the angular target TCP velocity values to before publishing.",
+    read_only: true,
+  }
+
+  tcp_target_acceleration_linear_decimal_places: {
+    type: int,
+    default_value: 3,
+    description: "Number of decimal places to round the linear target TCP acceleration values to before publishing.",
+    read_only: true,
+  }
+
+  tcp_target_acceleration_angular_decimal_places: {
+    type: int,
+    default_value: 2,
+    description: "Number of decimal places to round the angular target TCP acceleration values to before publishing.",
+    read_only: true,
+  }

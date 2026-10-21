@@ -1,0 +1,13 @@
+cartesian_twist_passthrough_controller:
+  tcp_interface_name: {
+    type: string,
+    default_value: "cartesian_twist_passthrough",
+    description: "Name of the TCP interface for velocity commands",
+    read_only: true,
+  }
+  timeout: {
+    type: double,
+    default_value: 2.0,
+    description: "Timeout in seconds for velocity commands. A non-positive value disables the timeout.",
+    read_only: false,
+  }

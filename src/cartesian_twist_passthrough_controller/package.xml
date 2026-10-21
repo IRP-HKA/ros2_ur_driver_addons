@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>cartesian_twist_passthrough_controller</name>
+  <version>1.0.0</version>
+  <description>This package provides a ROS2 controller, which allows to directly control the end-effector of a UR robot using ros2 twist msgs in cartesian space.</description>
+  <maintainer email="dominik.werman@h-ka.de">Dominik Werman</maintainer>
+  <license>BSD-3-Clause</license>
+  <url type="repository">https://github.com/IRP-HKA/ur_driver_addons</url>
+  <author email="dominik.werman@h-ka.de">Dominik Werman</author>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>pluginlib</depend>
+  <depend>generate_parameter_library</depend>
+  <depend>controller_interface</depend>
+  <depend>hardware_interface</depend>
+  <depend>realtime_tools</depend>
+  <depend>geometry_msgs</depend>
+  <depend>eigen</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+    <controller_interface plugin="${prefix}/cartesian_twist_passthrough_controller_plugin.xml"/>
+  </export>
+</package>

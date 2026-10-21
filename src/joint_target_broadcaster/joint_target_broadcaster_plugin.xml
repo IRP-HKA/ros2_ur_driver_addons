@@ -1,0 +1,12 @@
+<library path="joint_target_broadcaster">
+
+  <class name="joint_target_broadcaster/JointTargetBroadcaster"
+         type="joint_target_broadcaster::JointTargetBroadcaster"
+         base_class_type="controller_interface::ControllerInterface">
+    <description>
+      Broadcasts the current joint target states as a sensor_msgs/JointState message and the target joint accelerations as
+      std_msgs/Float64MultiArray.
+    </description>
+  </class>
+
+</library>
